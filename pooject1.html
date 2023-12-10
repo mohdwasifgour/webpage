@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .header{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: white;
+            box-shadow:10px 10px 20px 10px rgba(238, 225, 225, 0.5);
+            z-index: 1;
+            position: sticky;
+            /* height: 75px; */
+            /* flex-direction: column; */
+        }
+        /* .navbar:hover{
+            cursor: pointer;
+            /* transition: all 0.2s linear; */
+            /* transform: translateX(-15px); */
+            /* transform: scale(1.1); */
+        /* } */
+        .navbar{
+            position: relative;
+            left: -80px;
+        }
+        .header a{
+            margin-left: 30px;
+            font-size: 18px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+        .header a img{
+            width: 50px;
+            height: 50px;
+            transform: rotate(128deg);
+            left: 50px;
+            position: relative;
+        }
+        .path{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            font-weight: 760;
+            color: rgb(16, 12, 12);
+            position: relative;
+            top: -20px;
+            left: 45px;
+        }
+        .menu{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+          .navbar i{
+            font-size: 12px;
+          }  
+          #serch i{
+            font-size: 20px;
+          }  
+          .img{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+          }
+          #toggle,
+        .navbar label {
+           display: none;
+           }
+           #toggle,
+        .navbar label i {
+           font-size: 25px;
+           }
+    #toggle:checked ~ .header {
+        max-height: 100%;
+    }
+       @media screen and (max-width: 767px) {
+        #toggle,
+        .navbar label i{
+            position: fixed;
+            left: 2px;
+        /* max-height: 100%; */
+
+           }
+        .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        position: relative;
+        left: -280px;
+        top: 50px;
+
+
+    }
+     .navbar label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        left: 200px;
+        max-height: 100%;
+
+    }
+
+    #toggle:checked ~ .menu {
+        max-height: 100%;
+        display: inline-flex;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        transition: all 5s ease-in-out linear;
+        
+    }
+    #toggle:checked ~ .red{
+        position: relative;
+        top: -80px;
+    }
+    
+}
+.img img{
+    width: 100%;
+    height: 300px;
+}
+.img{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+@media  (min-width:320px) and (max-width:480px){
+    .header{
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            justify-content:flex-start;
+            background-color: rgb(252, 248, 248);
+            box-shadow:10px 10px 20px 10px rgba(238, 225, 225, 0.5);
+            z-index: 1;
+            /* position: sticky; */
+            /* top: 10px; */
+        }
+        .menu {
+        width: 100%;
+        /* max-height: 0; */
+        overflow: hidden;
+        flex-direction: column;
+        position: relative;
+        left: -85px;
+        /* top: -25px; */
+
+
+    }
+    .header a img{
+            width: 50px;
+            height: 50px;
+            transform: rotate(128deg);
+            left: -5px;
+            top: -20px;
+            position: relative;
+        }
+        .path{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 12px;
+            font-weight: 760;
+            color: rgb(16, 12, 12);
+            position: relative;
+            top: -40px;
+            left: -10px;
+        }
+        .section-in{
+        width: 10px;
+        height: 10px;
+        background-color:blue;
+        position: relative;
+        /* top: 50px; */
+        left: -120px;
+        
+     }
+     .section2{
+        background-color:white;
+        box-shadow:inset 15px 15px 15px rgb(255, 253, 253),5px 5px 15px rgb(72, 72, 162);
+        position: relative;
+        /* left: -300px; */
+        /* top: -370px; */
+        position: relative;
+        
+     }
+     .text{
+        width: 30px;
+        height: 30px;
+        font-size: 50px;
+        color: blue;
+        position: relative;
+        top: 50px;
+        left: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+        font-family: sans-serif;
+     }
+     #font{
+        font-size: 10px;
+        position: relative;
+        top: 90px;
+        left: -60px;
+        color: black;
+     }
+
+    
+}
+@media  (min-width:481px) and (max-width:768px){
+    .header{
+            display: flex;
+            align-items:center;
+            flex-wrap: wrap;
+            justify-content:space-between;
+            background-color: white;
+            box-shadow:10px 10px 20px 10px rgba(238, 225, 225, 0.5);
+            z-index: 1;
+            /* position: sticky; */
+            /* top: 10px; */
+        }
+        .menu {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        left: -85px;
+        top: -5px;
+
+
+    }
+    .header a img{
+            width: 50px;
+            height: 50px;
+            transform: rotate(128deg);
+            left: -5px;
+            position: relative;
+        }
+        .path{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 12px;
+            font-weight: 760;
+            color: rgb(16, 12, 12);
+            position: relative;
+            top: -20px;
+            left: -10px;
+        }
+        .menu {
+        width: 100%;
+        /* max-height: 0; */
+        overflow: hidden;
+        /* flex-direction: column; */
+        position: relative;
+        left: -350px;
+        top: -5px;
+
+
+    }
+    .header a{
+            /* margin-left: 30px; */
+            font-size: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+        .red img{
+            /* margin-left: 30px; */
+            /* font-size: 2px; */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+    
+}
+@media  (min-width:769px) and (max-width:1024px){
+    .header{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: white;
+            box-shadow:10px 10px 20px 10px rgba(238, 225, 225, 0.5);
+            z-index: 1;
+            position: sticky;
+            /* height: 75px; */
+            /* flex-direction: column; */
+        }
+
+    .navbar{
+            position: relative;
+            left: 50px;
+        }
+        .header a{
+            margin-left: 30px;
+            font-size: 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+}
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .section a{
+    font-size: 10px;
+    position: relative;
+    top: 70px;
+    left: 86px;
+    text-decoration:none;
+    }
+    .section b{
+    position: relative;
+    top: 95px;
+    font-weight: 1100;
+    font-size: 30px;
+    left: -45px;
+    text-decoration:none;
+    }
+    .box{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+     }
+     .box1{
+        width: 300px;
+        height:250px;
+        border: 2px solid rgb(246, 245, 245);
+        top: 130px;
+        position: relative;
+        border-radius: 5px;
+        text-align: center;
+     }
+     .box1 span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+     .box p{
+        width: 70px;
+        height: 70px;
+        border-radius: 50px;
+        border: 2px solid rgb(238, 234, 234);
+        position: relative;
+        background-color: blue;
+        left: 125px;
+        top: 10px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+     }
+     .box1 p i{
+        width: 68px;
+        font-size: 35px;
+        top: 13px;
+        position: relative;
+        color: azure;
+        height: 68px;
+     }
+     .box h2{
+        position: relative;
+        top: 30px;
+        font-size: 28px;
+     }
+     .box span{
+        position: relative;
+        left: 5px;
+        top: 45px;
+        color: rgb(98, 98, 81);
+     }
+     .arrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        top: 150px;
+        position: relative;
+     }
+     .arrow p{
+        width: 210px;
+        height: 35px;
+        background-color: blue;
+        color: white;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+
+     }
+     .some{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        top: 250px;
+        position: relative;
+     }
+     .some h1{
+        position: relative;
+        top: 2px;
+        left: -50px;
+        font-size: 43px;
+        top: 10px;
+
+     }
+     .some span{
+        position: relative;
+        left: 140px;
+        color: blue;
+        font-size: 11px;
+
+     }
+     .high{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        position: relative;
+        top: 320px;
+        /* background-color: bisque; */
+     }
+     .high1{
+        width: 300px;
+        height: 150px;
+     }
+     .high1 p{
+        text-align: center;
+     }
+     .high1 a{
+        color: blue;
+        font-size: 22px;
+     }
+     .high1 span::after {
+    content: " ";
+    width: 2rem;
+    height: 1px;
+    background: rgb(10, 10, 10);
+    position: absolute;
+    top: 10px;
+    left: 10;
+     }
+     .high1 h2{
+        position: relative;
+        top: -30px;
+        left: 60px;
+        font-size: 26px;
+     }
+     .high4{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        position: relative;
+        top: 380px;
+        /* background-color: blanchedalmond; */
+     }
+     .color{
+        width: 1260px;
+        height: 580px;
+        background-color: rgb(230, 240, 240);
+        /* z-index: 6; */
+        /* position: relative; */
+        /* top: -50px; */
+        margin-top: -150px;
+     }
+     .sectionl{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        top: 60px;
+        /* border: 1px solid rgb(1.6, 14, 14); */
+
+     }
+     .section-in{
+        width: 350px;
+        height: 350px;
+        /* border: 1px solid rgb(16, 14, 14); */
+        border-radius: 100%;
+        background-color:blue;
+        position: relative;
+        top: 50px;
+        left: 120px;
+        
+     }
+     .section2{
+        background-color:white;
+        box-shadow:inset 15px 15px 15px rgb(255, 253, 253),5px 5px 15px rgb(72, 72, 162);
+        position: relative;
+        left: -140px;
+        top: 70px;
+        width: 350px;
+        height: 350px;
+        border-radius: 100%;
+        position: relative;
+        
+     }
+     .text{
+        width: 200px;
+        height: 200px;
+        font-size: 150px;
+        color: blue;
+        position: relative;
+        left: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+        font-family: sans-serif;
+     }
+     #font{
+        font-size: 30px;
+        position: relative;
+        top: 90px;
+        left: -160px;
+        color: black;
+     }
+     .curcle{
+        width: 40px;
+        height:40px;
+        border-radius: 100%;
+        background-color: blue;
+        position: relative;
+        left: 350px;
+        top: -220px;
+     }
+     #circle{
+        width: 30px;
+        height: 30px;
+        background-color: blue;
+        border-radius: 100%;
+        position: relative;
+        left: 360px;
+        top: -190px;
+        
+     }
+     .tex{
+        position: relative;
+        top: -34px;
+        left: 35px;
+     }
+     .te{
+        position: relative;
+        left: 35px;
+     }
+     .apps{
+        width: 300px;
+        height: 300px;
+        font-size: 30px;
+        font-weight: 600;
+        flex-wrap: wrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+     .apps ul{
+        list-style: none;
+        color: blue;
+        }
+        .con{
+            color: black;
+        }
+     
+     </style>
+</head>
+<body>
+    <header class="header">
+        <a class="red">
+        <img src="https://i.pinimg.com/280x280_RS/de/f1/b8/def1b81e28edc869f605199df91027d5.jpg">
+        <span class="path">pathSoft</span></a>
+        <nav class="navbar">
+          <input type="checkbox" id="toggle" />
+          <label for="toggle"><i class="fa-solid fa-bars"></i></label>
+          <div class="menu">
+                <a>Home <i class="fa-sharp fa-solid fa-chevron-down"></i></a>
+                <a>About us</li>
+                <a>Services <i class="fa-sharp fa-solid fa-chevron-down"></i></a>
+                <a>Pages <i class="fa-sharp fa-solid fa-chevron-down"></i></a>
+                <a>Blog <i class="fa-sharp fa-solid fa-chevron-down"></i></a>
+                <a>Gallery <i class="fa-sharp fa-solid fa-chevron-down"></i></a>
+                <a>Contect Us <i class="fa-sharp fa-solid fa-chevron-down"></i></a>
+                <a>En</li>
+                <a id="serch"> <i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>  
+        </nav>
+    </header>
+    <div class="img">
+        <!-- <img src="C:\Users\HP\Pictures\image.jpg" alt=""> -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9Z_RNrIso-Tb1OlC6RG0EcFifJZYXUfbrHw&usqp=CAU" alt="">
+    </div>
+    <div class="section">
+       <a href="#">ARE AS WHAT WE SERV</a>
+       <b>Our Services</b>
+       </div>
+       <div class="box">
+        <div class="box1">
+            <p><i class="fa fa-cog" aria-hidden="true"></i></p>
+            <h2>Coporate Solution</h2>
+            <span>Lorem ipsum dolor sit amet consectetur  debitis explicabo labore cum odit, quis, dolores maxime expedita reiciendis distin volupt cupiditate similique totam volue</span>
+        </div>
+        <div class="box1">
+            <p> <i class="fa-sharp fa-solid fa-phone-volume"></i></p>
+            <h2>Call Center Solutions</h2>
+            <span> Consectetur adipisicing elit. Ullam, debitis explicabo labore cum odit, quis, dolores maxime voluptate cupiditate similique  voluptas ipsa officia neque fugiat eaque!</span>
+        </div>
+        <div class="box1">
+            <p><i class="fa-sharp fa-solid fa-cloud-arrow-down"></i></p>
+            <h2>Cloud Development</h2>
+            <span>   Ullam, debitis explicabo labore cum odit, quis, dolores maxime expedita reiciendis distinctio voluptate cupiditate similique  voluptas ipsa officia neque fugiat rwdsy</span>
+        </div>
+       </div>
+       <div class="arrow">
+        <p>See All Services.. <i class="fa-sharp fa-solid fa-arrow-right"></i></p>
+       </div>
+       <div class="container">
+       <div class="some">
+        <span>SOME REASONS<br>.</span>
+        <h1><br>Why Choose Us</h1>
+        </div>
+        <div class="high">
+            <div class="high1"><a>01
+                <span></span></a>
+                <h2>High Quality <br>Hardware</h2>
+                <p> Ipsum lorem dolor sit amet cos rem ipsa, his  quisquam eaque voluptatum provident earum at necessitatibus quam nostrum.
+                </p>
+            </div>
+            <div class="high1"><a>02
+                <span></span></a>
+                <h2>Dedicated 24\7 <br>Support</h2>
+                <p> Dolor sit amet cos rem ipsa,lorem ipsum his quisquam eaque voluptatum provident earum at necessitatibus quam nostrum.
+                </p>
+            </div>
+            <div class="high1"><a>03
+                <span></span></a>
+                <h2>30-Day Money-back <br>Guarantee</h2>
+                <p> Sit amet cos rem ipsa,lorem ipsum dolor his quisquam eaque voluptatum provident earum at necessitatibus quam nostrum.
+                </p>
+            </div>
+        </div>
+       </div> 
+    <div class="high4">
+        <div class="high1"><a>04
+            <span></span></a>
+            <h2>Agile and Fast<br>Working Style</h2>
+            <p> Ipsum lorem dolor sit amet cos rem ipsa, his  quisquam eaque voluptatum provident earum at necessitatibus quam nostrum.
+            </p>
+        </div>
+        <div class="high1"><a>05
+            <span></span></a>
+            <h2>Some Apps <br>are Free</h2>
+            <p> Dolor sit amet cos rem ipsa,lorem ipsum his quisquam eaque voluptatum provident earum at necessitatibus quam nostrum.
+            </p>
+        </div>
+        <div class="high1"><a>06
+            <span></span></a>
+            <h2>High Level of<br>Usability</h2>
+            <p> Sit amet cos rem ipsa,lorem ipsum dolor his quisquam eaque voluptatum provident earum at necessitatibus quam nostrum.
+            </p>
+        </div>
+    </div>
+    </div>
+    <div class="color"></div>
+    <div class="sectionl">
+        <div class="section-in"></div>
+        <div class="section2">
+            <div class="text">10
+                <h1 id="font"><br><br><div class="te">Years</div> of 
+                    <div class="tex">Experience</div> </h1></div>
+                <div class="curcle"></div>
+                <div  id="circle"></div>
+        </div>
+        <div class="apps"> 
+            <ul>
+            <li>2k</li>
+            <li class="con">Apps Developed</li><br>
+            <li>40</li>
+            <li class="con">Consultans</li><br>
+            <li>160</li>
+            <li class="con">Employers</li>
+            </ul>
+
+        </div>
+    </div><br><br><br><br><br><br><br><br>
+    <hr>
+</body>
+</html>
